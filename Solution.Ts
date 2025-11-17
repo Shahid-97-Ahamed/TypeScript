@@ -84,5 +84,30 @@ function printBookDetails(book:Book):void{
     const status = book.isAvailable? "Yes" : "No";
 
     console.log(`Title: ${book.title}, Author:${book.author},Published:${book.publishedYear},Available:${status}`);
-    
+
 }
+
+
+
+
+function getUniqueValues(arr1: (string | number)[], arr2: (string | number)[]): (string | number)[]{
+    const result:(string|number)[]=[];
+
+    for(const item of arr1){
+        if(!result.includes(item)){
+            result.push(item);
+        }
+    }
+
+    for(const item of arr2){
+        if(!result.includes(item)){
+            result.push(item);
+        }
+    }
+
+    return result;
+}
+
+
+
+
